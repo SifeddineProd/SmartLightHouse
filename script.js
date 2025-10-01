@@ -17,11 +17,11 @@ const roomData = {
     extra: "✨ قصة أول بطل في المسابقة: شاب حمل حلمه حتى صار منارة لغيره.", 
     lottie: "https://assets2.lottiefiles.com/packages/lf20_jcikwtux.json"
   },
-  leaders: { 
-  title: "🧭 قاعة القادة", 
-  text: "تعرف على قادة الفكر والإبداع الذين تركوا بصمتهم.", 
-  extra: "🌟 اقتباس ملهم: <strong>“القائد الحقيقي هو من يُضيء الطريق لغيره.”</strong>", 
-  lottie: "https://assets3.lottiefiles.com/packages/lf20_jzqj3xeq.json"
+  leaders: {
+  title: "🧭 قاعة القادة",
+  text: "تعرف على قادة الفكر والإبداع الذين تركوا بصمتهم.",
+  extra: "🌟 اقتباس ملهم: <strong>“القائد الحقيقي هو من يُضيء الطريق لغيره.”</strong>",
+  lottie: "https://assets9.lottiefiles.com/packages/lf20_vf1pnl2d.json"
 },
   archive: { 
     title: "🗂️ الأرشيف", 
@@ -81,6 +81,7 @@ window.addEventListener('click', (e) => {
     modal.classList.add('hidden');
   }
 });
+
 
 
 
