@@ -21,7 +21,7 @@ const roomData = {
     title: "🧭 قاعة القادة", 
     text: "تعرف على قادة الفكر والإبداع الذين تركوا بصمتهم.", 
     extra: "🌟 اقتباس ملهم: <strong>“القائد الحقيقي هو من يُضيء الطريق لغيره.”</strong>", 
-    lottie: "https://assets3.lottiefiles.com/packages/lf20_jzqj3xeq.json"
+    lottie: "https://lottiefiles.com/animation/leader-icon-567890"
   },
   archive: { 
     title: "🗂️ الأرشيف", 
@@ -81,5 +81,6 @@ window.addEventListener('click', (e) => {
     modal.classList.add('hidden');
   }
 });
+
 
 
