@@ -31,12 +31,14 @@ const roomData = {
   }
 };
 
-
+// عند الضغط على أي غرفة
 rooms.forEach(room => {
   room.addEventListener('click', () => {
-    const key = room.dataset.room;
+    const key = room.getAttribute('data-target');
+
+    // تحديث المحتوى
     content.innerHTML = `
-      <div class="zoom-in">
+      <div class="zoom-in" id="room-${key}">
         <div id="lottie-${key}" style="width:150px; height:150px; margin:auto;"></div>
         <h2>${roomData[key].title}</h2>
         <p>${roomData[key].text}</p>
@@ -44,7 +46,7 @@ rooms.forEach(room => {
       </div>
     `;
 
-    // تحميل الأنيميشن
+    // تحميل أنيميشن Lottie
     lottie.loadAnimation({
       container: document.getElementById(`lottie-${key}`),
       renderer: 'svg',
@@ -52,10 +54,13 @@ rooms.forEach(room => {
       autoplay: true,
       path: roomData[key].lottie
     });
+
+    // تمرير تلقائي إلى المحتوى
+    document.getElementById(`room-${key}`).scrollIntoView({ behavior: 'smooth' });
   });
 });
 
-
+// فتح النافذة المنبثقة
 function openModal(key) {
   modalBody.innerHTML = `
     <div class="slide-in">
@@ -66,6 +71,7 @@ function openModal(key) {
   modal.classList.remove('hidden');
 }
 
+// إغلاق النافذة المنبثقة
 closeModal.addEventListener('click', () => {
   modal.classList.add('hidden');
 });
@@ -76,13 +82,3 @@ window.addEventListener('click', (e) => {
   }
 });
 
-// عند الضغط على أي غرفة يتم التمرير التلقائي إلى محتواها
-document.querySelectorAll('.room').forEach(room => {
-  room.addEventListener('click', () => {
-    const targetId = room.getAttribute('data-target');
-    const targetSection = document.getElementById(targetId);
-    if (targetSection) {
-      targetSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  });
-});
