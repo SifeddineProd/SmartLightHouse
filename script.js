@@ -75,3 +75,14 @@ window.addEventListener('click', (e) => {
     modal.classList.add('hidden');
   }
 });
+
+// عند الضغط على أي غرفة يتم التمرير التلقائي إلى محتواها
+document.querySelectorAll('.room').forEach(room => {
+  room.addEventListener('click', () => {
+    const targetId = room.getAttribute('data-target');
+    const targetSection = document.getElementById(targetId);
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
