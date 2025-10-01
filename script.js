@@ -18,11 +18,11 @@ const roomData = {
     lottie: "https://assets2.lottiefiles.com/packages/lf20_jcikwtux.json"
   },
   leaders: { 
-    title: "🧭 قاعة القادة", 
-    text: "تعرف على قادة الفكر والإبداع الذين تركوا بصمتهم.", 
-    extra: "🌟 اقتباس ملهم: <strong>“القائد الحقيقي هو من يُضيء الطريق لغيره.”</strong>", 
-    lottie: "https://lottiefiles.com/animation/leader-icon-567890"
-  },
+  title: "🧭 قاعة القادة", 
+  text: "تعرف على قادة الفكر والإبداع الذين تركوا بصمتهم.", 
+  extra: "🌟 اقتباس ملهم: <strong>“القائد الحقيقي هو من يُضيء الطريق لغيره.”</strong>", 
+  lottie: "https://assets3.lottiefiles.com/packages/lf20_jzqj3xeq.json"
+},
   archive: { 
     title: "🗂️ الأرشيف", 
     text: "الأعمال السابقة محفوظة هنا للأجيال القادمة.", 
@@ -81,6 +81,7 @@ window.addEventListener('click', (e) => {
     modal.classList.add('hidden');
   }
 });
+
 
 
 
